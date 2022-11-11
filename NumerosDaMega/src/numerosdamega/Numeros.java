@@ -19,7 +19,7 @@ public class Numeros {
         for (int i = 0; i < 6; i++) {
             Random numeroaleatorio = new Random();
             int n;
-            boolean repetir = false;
+            boolean repetir;
             do {
                 repetir = false;
                 n = numeroaleatorio.nextInt(1, 60);
