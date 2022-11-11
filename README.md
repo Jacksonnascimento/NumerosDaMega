@@ -1,2 +1,2 @@
 # NumerosDaMega
- Cria números aleatóricos para jogar na mega
+Gerador de números aleatórios para jogar na Mega-Sena.
