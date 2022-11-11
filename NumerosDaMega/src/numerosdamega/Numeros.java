@@ -5,6 +5,7 @@
 package numerosdamega;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 /**
@@ -22,7 +23,7 @@ public class Numeros {
             boolean repetir;
             do {
                 repetir = false;
-                n = numeroaleatorio.nextInt(1, 60);
+                n = numeroaleatorio.nextInt(1, 61);
                 for (Object nu : numeros) {
                     if ((int) nu == n) {
                         repetir = true;
@@ -32,7 +33,8 @@ public class Numeros {
 
             numeros.add(n);
         }
-
+        
+        Collections.sort(numeros);
         return numeros;
 
     }
