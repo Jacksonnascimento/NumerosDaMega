@@ -12,17 +12,28 @@ import java.util.Random;
  * @author Jackson
  */
 public class Numeros {
-   
-    
-    public ArrayList getNumeros(){
-       ArrayList<Integer> numeros = new ArrayList<>();
-        
-        for(int i = 0; i<6; i++){
+
+    public ArrayList getNumeros() {
+        ArrayList<Integer> numeros = new ArrayList<>();
+
+        for (int i = 0; i < 6; i++) {
             Random numeroaleatorio = new Random();
-            numeros.add(numeroaleatorio.nextInt(1, 60));
+            int n;
+            boolean repetir = false;
+            do {
+                repetir = false;
+                n = numeroaleatorio.nextInt(1, 60);
+                for (Object nu : numeros) {
+                    if ((int) nu == n) {
+                        repetir = true;
+                    }
+                }
+            } while (repetir);
+
+            numeros.add(n);
         }
-        
+
         return numeros;
-       
+
     }
 }
